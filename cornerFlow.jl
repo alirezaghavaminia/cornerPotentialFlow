@@ -45,12 +45,9 @@ function createFeild(Nx, Ny, xmin, xmax, ymin, ymax)
     u = Array{Float64}(undef,Nx,Ny)
     v = Array{Float64}(undef,Ny,Ny)
     s = Array{Float64}(undef,Nx,Ny)
-    Lx_max = xmax
-    Ly_max = ymax
-    Lx_min = xmin
-    Ly_min = ymin
-    x = Lx_min:(Lx_max-Lx_min)/(Nx-1):Lx_max
-    y = Ly_min:(Ly_max-Ly_min)/(Ny-1):Ly_max
+
+    x = xmin:(xmax-xmin)/(Nx-1):xmax
+    y = ymin:(ymax-ymin)/(Ny-1):ymax
 
     for j = 1:size(y,1)
         for i = 1:size(x,1)
